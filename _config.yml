@@ -1,1 +1,12 @@
 theme: minima
+title: "Your Name's Blog"
+description: "Showcasing my projects and experiences"
+author: Akshita Srinivasan Kadambathil
+email: akshitasij@gmail.com
+plugins:
+  - jekyll-github-metadata
+header_pages:
+  - index.md
+  - projects.md
+  - blog.md
+  - about.md
