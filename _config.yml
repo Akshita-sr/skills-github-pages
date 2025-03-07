@@ -1,19 +1,22 @@
-theme: minimal-mistakes-jekyll
-title: "Your Name's Blog"
+remote_theme: mmistakes/minimal-mistakes  # For using the theme without installation
+title: "Akshita's Blog"
 description: "Showcasing my projects and experiences"
 author: Akshita Srinivasan Kadambathil
-email: akshitasij@gmail.com
+email: akshita.ks1996@gmail.com
+
 plugins:
   - jekyll-github-metadata
+
 header_pages:
   - index.md
   - projects.md
   - blog.md
   - about.md
+
 github:
-  is_project_page: true
+  username: Akshita-sr  # Replaced is_project_page with username
+
 social:
   email: akshita.ks1996@gmail.com
   linkedin: https://www.linkedin.com/in/akshitaks/
   github: https://github.com/Akshita-sr
-
