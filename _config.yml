@@ -1,4 +1,4 @@
-theme: minima
+theme: minimal-mistakes-jekyll
 title: "Your Name's Blog"
 description: "Showcasing my projects and experiences"
 author: Akshita Srinivasan Kadambathil
@@ -10,3 +10,10 @@ header_pages:
   - projects.md
   - blog.md
   - about.md
+github:
+  is_project_page: true
+social:
+  email: akshita.ks1996@gmail.com
+  linkedin: https://www.linkedin.com/in/akshitaks/
+  github: https://github.com/Akshita-sr
+
