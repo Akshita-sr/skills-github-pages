@@ -1,0 +1,51 @@
+---
+layout: home
+author_profile: true
+header:
+  overlay_image: /assets/images/header-bg.jpg
+  overlay_filter: 0.5 # darkens the image
+  actions:
+    - label: "View My Projects"
+      url: "/projects/"
+    - label: "View My Resume"
+      url: "/resume/"
+excerpt: "Full-Stack Junior Software Developer with experience in web application development, robotics engineering, and AI/ML applications."
+intro: 
+  - excerpt: 'Welcome to my portfolio website. Here you can find information about my projects, skills, and professional journey.'
+feature_row:
+  - image_path: /assets/images/projects-thumb.jpg
+    alt: "Projects"
+    title: "My Projects"
+    excerpt: "Check out some of my recent projects in web development, robotics engineering, and AI/ML applications."
+    url: "/projects/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/skills-thumb.jpg
+    alt: "Skills"
+    title: "My Skills"
+    excerpt: "I am proficient in ABP Framework, C#, Vue.js, JavaScript, and REST APIs, and have experience with machine learning and robotics."
+    url: "/about/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+  - image_path: /assets/images/certifications-thumb.jpg
+    alt: "Certifications"
+    title: "My Certifications"
+    excerpt: "View my professional certifications, academic achievements, and language qualifications."
+    url: "/certifications/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
+
+## Recent Blog Posts
+
+<div class="grid__wrapper">
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
+
+<a href="/blog/" class="btn btn--primary">View All Posts</a>
