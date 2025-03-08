@@ -1,0 +1,144 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Custom styles */
+
+// Custom accent color
+$primary-color: #0066cc;
+
+// Typography enhancements
+body {
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.page__content {
+  p, li, dl {
+    font-size: 1em;
+  }
+}
+
+// Custom styles for the masthead (header)
+.masthead {
+  border-bottom: 2px solid $primary-color;
+}
+
+// Custom button styling
+.btn {
+  &--primary {
+    background-color: $primary-color;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Custom styling for the contact form
+.form-group {
+  margin-bottom: 1em;
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }
+}
+
+// Projects grid improvements
+.grid__item {
+  .archive__item-title {
+    margin-top: 0.5em;
+  }
+  
+  .archive__item-excerpt {
+    margin-top: 0.5em;
+  }
+}
+
+// Custom styling for skill bars (for About page)
+.skill-bar {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  
+  .skill-level {
+    height: 20px;
+    border-radius: 4px;
+    background-color: $primary-color;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    font-size: 12px;
+  }
+}
+
+// Timeline styling for resume page
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2em;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: -34px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $primary-color;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .masthead__inner-wrap {
+    padding: 0.5em;
+  }
+  
+  .page__hero--overlay {
+    padding: 2em 0;
+    
+    .page__title {
+      font-size: 1.5em;
+    }
+  }
+}
