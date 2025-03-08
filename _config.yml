@@ -1,22 +1,162 @@
-remote_theme: mmistakes/minimal-mistakes  # For using the theme without installation
-title: "Akshita's Blog"
-description: "Showcasing my projects and experiences"
-author: Akshita Srinivasan Kadambathil
-email: akshita.ks1996@gmail.com
+# Theme settings
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "default" # Options: air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 
+# Site settings
+locale: "en-US"
+title: "Akshita's Portfolio"
+subtitle: "Software Developer & Robotics Engineer"
+name: "Akshita Srinivasan Kadambathil"
+description: "A showcase of my projects, skills, and professional journey"
+url: # the base hostname & protocol, e.g. "https://username.github.io"
+repository: "Akshita-sr/Akshita-sr.github.io" # GitHub username/repo-name
+logo: "/assets/images/logo.png" # Path to your logo image (create this later)
+search: true # Enable site-wide search
+
+# Social sharing
+twitter:
+  username: # Your Twitter username (optional)
+facebook:
+  username: # Your Facebook username (optional)
+og_image: # Open Graph default image
+social:
+  type: Person
+  name: Akshita Srinivasan Kadambathil
+  links:
+    - "https://www.linkedin.com/in/akshitaks/"
+    - "https://github.com/Akshita-sr"
+
+# Analytics
+analytics:
+  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
+
+# Site Author information
+author:
+  name: "Akshita Srinivasan Kadambathil"
+  avatar: "/assets/images/profile.jpg" # Path to your profile image (create this later)
+  bio: "Full-Stack Junior Software Developer with experience in web application development, robotics engineering, and AI/ML applications."
+  location: "Your Location" # Optional
+  email: "akshita.ks1996@gmail.com"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:akshita.ks1996@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/akshitaks/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Akshita-sr"
+
+# Site Footer
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/akshitaks/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Akshita-sr"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  certifications:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _certifications
+  - scope:
+      path: ""
+      type: certifications
+    values:
+      layout: single
+      author_profile: false
+      share: false
+
+# Plugins
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
   - jekyll-github-metadata
 
-header_pages:
-  - index.md
-  - projects.md
-  - blog.md
-  - about.md
+# Pagination
+paginate: 5
+paginate_path: /page:num/
 
-github:
-  username: Akshita-sr  # Replaced is_project_page with username
-
-social:
-  email: akshita.ks1996@gmail.com
-  linkedin: https://www.linkedin.com/in/akshitaks/
-  github: https://github.com/Akshita-sr
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
